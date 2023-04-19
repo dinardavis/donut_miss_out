@@ -1,0 +1,125 @@
+.nav-container.no-background {
+  background-color: "transparent"
+}
+
+.nav-container.nav-shadow {
+  background-color: hsl(var(--clr-white), 0.9);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-nav {
+  display: none;
+}
+
+.nav-logo {
+  height: 60px;
+}
+
+.mobile-nav {
+  display: flex;
+}
+
+.mobile-nav-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--clr-white), 0.85);
+  text-transform: uppercase;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow: hidden;
+  z-index: 9;
+  left: 0;
+  opacity: 0.7;
+  height: 50vh;
+  top: -100vh;
+  transition: all 0.4s linear;
+}
+
+.mobile-nav-container ul li {
+  color: hsl(var(--clr-primary));
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 6px;
+  font-size: 1.4rem;
+  margin: 2rem 0 ;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.mobile-nav-container ul li:hover {
+  -webkit-transform: scale(1.05);
+}
+
+.show-mobile-nav {
+  opacity: 1;
+  top: 0;
+  height: 100vh;
+}
+
+.hamburger {
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.burger-lines {
+  background-color: hsl(var(--clr-primary));
+  height: 3px;
+  width: 30px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  transition: all 0.2s linear;
+}
+
+.burger-lines:nth-child(1) {
+  margin-top: 7px;
+}
+
+.animate-burger:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 4px);
+}
+
+.animate-burger:nth-child(2) {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.animate-burger:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -4px);
+}
+
+
+@media screen and (min-width: 800px) {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 2400px;
+    padding: .7rem 1rem;
+  }
+
+  .fixed-position {
+    overflow: scroll;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+  }
+
+  .main-nav ul {
+    display: flex;
+  }
+
+  .main-nav ul li {
+    margin-left: 1.2rem;
+    padding-bottom: 3px;
+  }
+}
