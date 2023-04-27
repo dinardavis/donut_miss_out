@@ -1,9 +1,21 @@
-.nav-container.no-background {
-  background-color: "transparent"
+@-o-keyframes navBackgroundFade {
+  0%   { background-color: #FFFFFF; }
+  50%  { background-color: #ffffffbf; }
+  100% { background-color: #ffffff22; }
+}
+@keyframes navBackgroundFade {
+  0%   { background-color: #FFFFFF; }
+  50%  { background-color: #ffffffbf; }
+  100% { background-color: #ffffff22; }
 }
 
-.nav-container.nav-shadow {
-  background-color: hsl(var(--clr-white), 0.9);
+.no-background {    
+  -o-animation: navBackgroundFade .3s ease-in-out; 
+  animation: navBackgroundFade .3s ease-in-out; 
+}
+
+.nav-shadow {
+  background-color: hsl(var(--clr-white), .95);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -12,7 +24,9 @@
 }
 
 .nav-logo {
-  height: 60px;
+  position: relative;
+  height: 70px;
+  z-index: 100;
 }
 
 .mobile-nav {
@@ -25,7 +39,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(var(--clr-white), 0.85);
+  background-color: hsl(var(--clr-white), .95);
   text-transform: uppercase;
   width: 100%;
   height: 100vh;
@@ -33,7 +47,6 @@
   overflow: hidden;
   z-index: 9;
   left: 0;
-  opacity: 0.7;
   height: 50vh;
   top: -100vh;
   transition: all 0.4s linear;
@@ -116,6 +129,10 @@
 
   .main-nav ul {
     display: flex;
+  }
+
+  .main-nav a {
+    text-shadow: 1px 1px 1px #fff;
   }
 
   .main-nav ul li {

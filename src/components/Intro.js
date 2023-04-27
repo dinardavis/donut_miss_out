@@ -1,7 +1,6 @@
 import React from 'react'
 import mainBackground from "../assets/imgs/main_background.png"
-import donutHero from "../assets/imgs/donut_hero.png"
-import hand from "../assets/imgs/hand.png"
+import donutHero from "../assets/imgs/donut_main.png"
 
 import { FaFacebookF } from "react-icons/fa"
 import { BsInstagram } from "react-icons/bs"

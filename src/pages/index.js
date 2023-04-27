@@ -11,6 +11,7 @@ import '../assets/css/styles.css'
 import '../assets/css/nav_styles.css'
 
 export default function Home() {
+
   return (
     <Layout>
       <>

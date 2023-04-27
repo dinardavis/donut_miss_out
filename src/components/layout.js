@@ -11,8 +11,8 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <Nav />
       <main id="home" className='main-container'>
+        <Nav />
         {children}
         <Footer />
       </main>

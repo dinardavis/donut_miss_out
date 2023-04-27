@@ -40,7 +40,7 @@ export default function Navbar() {
     if(windowWidth > 800) {
       setMobileNavState(false)
     }
-  })
+  }, [windowWidth])
 
 
   React.useEffect(() => {
@@ -54,15 +54,17 @@ export default function Navbar() {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '10px 30px',
+    marginTop: '.5rem',
     zIndex: '100',
-    width: '100%',
-    transition: 'top 0.3s'
+    width: '98%',
+    transition: 'top 0.3s',
+    borderRadius: '1rem'
   }
 
   return (
-    <nav className={`nav-container ${prevScroll === 0 || mobileNavState ? "no-background" : "nav-shadow"}`} style = {{...styles, top: visible ? '0px' : '-85px', backgroundColor: mobileNavState ? "transparent" : ""}}>
+    <nav className={`nav-container ${prevScroll === 0 || mobileNavState ? "no-background" : "nav-shadow"}`} style = {{...styles, top: visible ? '0px' : '-105px', backgroundColor: mobileNavState ? "transparent" : ""}}>
       <Link to="/#home">
-        <img className="nav-logo" style = {{opacity: mobileNavState ? "0" : "1"}} src={mainLogo} alt="Dinar Davis Main Logo" />
+        <img className="nav-logo" src={mainLogo} alt="Dinar Davis Main Logo" />
       </Link>
 
       <div className="main-nav">

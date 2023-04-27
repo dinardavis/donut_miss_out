@@ -74,7 +74,7 @@ export default function Footer() {
             </a>
           </div>    
         </div>
-        <hr/>
+  
       <div className='footer-copyright'>&copy; {new Date().getFullYear()} Donut Miss It</div>
       <img className='footer-background' src={footerBackground} alt='' />
     </footer>

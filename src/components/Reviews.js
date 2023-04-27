@@ -11,20 +11,37 @@ export default function Reviews() {
       id: 1
     },
     {
-      quote: "I’ve realized that the right place doesn’t mean anything without the right people.",
+      quote: "I’ve realized that the right place doesn’t mean anything without the right donut.",
       name: "Mia Wallace",
       id: 2
     },
     {
+      quote: "Pretty please with sugar on top...",
+      name: "The Wolf",
+      id: 3
+    },
+    {
+      quote: "You don’t have to tell me how good my donut is, OK? I’m the one who bought it; I know how good it is.",
+      name: "Jimmie Dimmick",
+      id: 4
+    },
+    {
       quote: "There's a sensuous thing going on where you don't talk about it, but you know it...",
       name: "Vincent Vega",
-      id: 3
+      id: 5
+    },
+    {
+      quote: "We don’t want to think, we want to know...donuts.",
+      name: "Marsellus Wallace",
+      id: 6
     },
   ]
 
   const [reviewIndex, setReviewIndex] = React.useState(0);
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth)
   const timeoutRef = React.useRef(null);
-  const delay = 4500;
+  const delay = 6500;
+
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -33,26 +50,38 @@ export default function Reviews() {
   }
 
   React.useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(
-      () =>
-        setReviewIndex((prevReviewIndex) =>
-          prevReviewIndex === reviewData.length - 1 ? 0 : prevReviewIndex + 1
-        ),
-      delay
-    );
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth)
+    }
+    window.addEventListener("resize", handleWindowResize)
 
-    return () => {
+    if(windowWidth < 800) {
       resetTimeout();
-    };
-  }, [reviewIndex]);
+      timeoutRef.current = setTimeout(
+        () =>
+          setReviewIndex((prevReviewIndex) =>
+            prevReviewIndex === reviewData.length - 1 ? 0 : prevReviewIndex + 1
+          ),
+        delay
+      );
+  
+      return () => {
+        resetTimeout();
+      };
+    } else {
+      setReviewIndex(0)
+    }
+   
+  }, [reviewIndex, windowWidth]);
 
   const reviews = reviewData.map(review => {
     return (
       <div key={review.id} className='customer-review'>
-        <FaQuoteLeft className='quote-left' />
-        <p className='quote-copy'>{review.quote}<FaQuoteRight className='quote-right'/></p>
-        <p className='review-name'>- {review.name}</p>
+        <div className='review-content'>
+         
+          <p className='quote-copy'> <FaQuoteLeft className='quote-left' />{review.quote}<FaQuoteRight className='quote-right'/></p>
+          <p className='review-name'>- {review.name}</p>
+        </div>
       </div>
     )
   })
@@ -65,10 +94,8 @@ export default function Reviews() {
     </div>
   })
   
- 
-
   return (
-    <section id="reviews">
+    <section id="reviews" className='reviews-section'>
       <h1 className='section-header reviews-header'>The<span>Reviews</span></h1>
       <div className='review-container'>
         <div className='review-track' style={{ transform: `translate3d(${-reviewIndex * 100}%, 0, 0)` }}>
