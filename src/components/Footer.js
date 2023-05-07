@@ -16,6 +16,7 @@ import { BsTwitter } from "react-icons/bs"
 export default function Footer() {
   return (
     <footer className='footer'>
+      <div className='footer-content'>
         <NewsLetter />
         <div className='footer-info'>
           <ul>
@@ -36,10 +37,7 @@ export default function Footer() {
               <Link to="/#about">about</Link>
             </li>
             <li>
-              <Link to="/#donuts">our donuts</Link>
-            </li>
-            <li>
-              <Link to="/#order">order online</Link>
+              <Link to="/#order">order</Link>
             </li>
             <li>
               <Link to="/#reviews">reviews</Link>
@@ -74,7 +72,7 @@ export default function Footer() {
             </a>
           </div>    
         </div>
-  
+      </div>
       <div className='footer-copyright'>&copy; {new Date().getFullYear()} Donut Miss It</div>
       <img className='footer-background' src={footerBackground} alt='' />
     </footer>

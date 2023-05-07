@@ -8,7 +8,7 @@ export default function About() {
       <div className='about-content'>
         <div className='about-copy'>
           <h1 className='section-header about-header'>About<span>Us</span></h1>
-          <p className='about-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum, odit eum repellendus facilis in architecto, tempore, accusantium consequuntur minima commodi doloremque repellat quis inventore. Inventore, rem? At ea eius ipsam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque mollitia quisquam recusandae impedit iure. Nostrum possimus incidunt officiis? Cumque sapiente adipisci deserunt aut ad dicta illo harum quae sunt velit.</p>
+          <p className='about-text'><span className='name-highlight'>Donut Miss It</span> is more than just a donut shop. Our stores are beloved parts of each of the communities we serve. We are dedicated to delighting our guests by treating them like family and consistently providing a superior product and exceptional customer service in an authentic manner. We pride ourselves on our community engagement and commitment to making innovated changes every day.</p>
           <button className='about-btn btn'>Read More</button>
         </div>
         <div className='about-img-container'>

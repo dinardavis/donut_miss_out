@@ -64,7 +64,7 @@ export default function Navbar() {
   return (
     <nav className={`nav-container ${prevScroll === 0 || mobileNavState ? "no-background" : "nav-shadow"}`} style = {{...styles, top: visible ? '0px' : '-105px', backgroundColor: mobileNavState ? "transparent" : ""}}>
       <Link to="/#home">
-        <img className="nav-logo" src={mainLogo} alt="Dinar Davis Main Logo" />
+        <img className="nav-logo" onClick={() => setMobileNavState(false)} src={mainLogo} alt="Dinar Davis Main Logo" />
       </Link>
 
       <div className="main-nav">
@@ -73,10 +73,7 @@ export default function Navbar() {
             <Link to="/#about" activeClassName='active-link'>about</Link>
           </li>
           <li>
-            <Link to="/#donuts" activeClassName='active-link'>our donuts</Link>
-          </li>
-          <li>
-            <Link to="/#order" activeClassName='active-link'>order online</Link>
+            <Link to="/#order" activeClassName='active-link'>order</Link>
           </li>
           <li>
             <Link to="/#reviews" activeClassName='active-link'>reviews</Link>

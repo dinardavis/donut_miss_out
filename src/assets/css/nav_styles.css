@@ -16,7 +16,7 @@
 
 .nav-shadow {
   background-color: hsl(var(--clr-white), .95);
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.2);
 }
 
 .main-nav {
@@ -65,6 +65,11 @@
   -webkit-transform: scale(1.05);
 }
 
+.mobile-nav-container .social-icon-container {
+  margin: 0 .3rem;
+}
+
+
 .show-mobile-nav {
   opacity: 1;
   top: 0;
@@ -78,12 +83,16 @@
 }
 
 .burger-lines {
-  background-color: hsl(var(--clr-primary));
+  background-color: hsl(var(--clr-secondary));
   height: 3px;
   width: 30px;
   margin-bottom: 5px;
   border-radius: 3px;
   transition: all 0.2s linear;
+}
+
+.burger-box-shadow {
+  box-shadow: 1px 1px 2px #fff;
 }
 
 .burger-lines:nth-child(1) {
@@ -132,7 +141,20 @@
   }
 
   .main-nav a {
+    padding-bottom: 3px;
+    background-image: linear-gradient(hsl(var(--clr-accent)), hsl(var(--clr-accent)));
+    background-position: 0 100%;
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition:
+      background-size 0.2s,
+      background-position 0s 0.2s;
     text-shadow: 1px 1px 1px #fff;
+  }
+
+  .main-nav a:hover {
+    background-position: 100% 100%;
+    background-size: 100% 2px;
   }
 
   .main-nav ul li {

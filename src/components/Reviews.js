@@ -87,7 +87,7 @@ export default function Reviews() {
   })
 
   const reviewMarkers = reviewData.map((_ , idx) => {
-    return <div key={idx}className={`review-marker ${reviewIndex === idx ? "active" : ""}`}
+    return <div key={idx}className={`review-marker ${reviewIndex === idx ? "current" : ""}`}
       onClick={() => {
         setReviewIndex(idx);
       }}>

@@ -10,10 +10,10 @@ import { BsTwitter } from "react-icons/bs"
 export default function Intro() {
   return (
     <section className='intro-section'>
-      <img className='intro-background' src={mainBackground}alt='' />
+      <img className='intro-background' src={mainBackground} alt='' />
       <div className='intro-content'>
         <h1 className='section-header intro-header'>World's best<br/><span>donuts</span></h1>
-        <p>A little sweetness always goes a long way!</p>
+        <p>A little sweetness goes a long way!</p>
 
         <img className="intro-donut" src={donutHero} alt="Sprinkle donut surrounded by clouds" />
 

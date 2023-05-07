@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../components/Layout"
 import Intro from "../components/Intro"
 import About from "../components/About"
-import OnlineOrder from "../components/OnlineOrder"
+import Order from "../components/Order"
 import Reviews from "../components/Reviews"
 import SocialSites from '../components/SocialSites'
 
@@ -17,7 +17,7 @@ export default function Home() {
       <>
         <Intro />
         <About />
-        <OnlineOrder />
+        <Order />
         <Reviews />
         <SocialSites />
       </>

@@ -17,7 +17,7 @@ export default function MobileNav(props) {
   return (
     <div className="mobile-nav">
       <div className="hamburger" onClick={props.handleToggle} >
-        <div className={`burger-lines ${props.mobileNavState? "animate-burger" : ""}`}></div>
+        <div className={`burger-lines ${props.mobileNavState? "animate-burger" : "burger-box-shadow"}`}></div>
         <div className={`burger-lines ${props.mobileNavState? "animate-burger" : ""}`}></div>
         <div className={`burger-lines ${props.mobileNavState? "animate-burger" : ""}`}></div>
       </div>
@@ -29,10 +29,7 @@ export default function MobileNav(props) {
             <Link to="/#about" activeClassName='active-link'>about</Link>
           </li>
           <li>
-            <Link to="/#donuts" activeClassName='active-link'>our donuts</Link>
-          </li>
-          <li>
-            <Link to="/#order" activeClassName='active-link'>order online</Link>
+            <Link to="/#order" activeClassName='active-link'>order</Link>
           </li>
           <li>
             <Link to="/#reviews" activeClassName='active-link'>reviews</Link>
@@ -43,22 +40,22 @@ export default function MobileNav(props) {
         </ul>
         <div className="socials-container">
           <div className="social-icons">
-            <a href="https://facebook.com">
+            <a href="https://facebook.com" target='_blank' rel="noreferrer">
               <div className='social-icon-container'>
                 <FaFacebookF className="social" />
               </div>
             </a>
-            <a href="https://instagram.com">
+            <a href="https://instagram.com" target='_blank' rel="noreferrer">
               <div className='social-icon-container'>
                 <BsInstagram className="social" />
               </div>
             </a>
-            <a href="https://snapchat.com">
+            <a href="https://snapchat.com" target='_blank' rel="noreferrer">
               <div className='social-icon-container'>
                 <BsSnapchat className="social" />
               </div>
             </a>
-            <a href="https://twitter.com">
+            <a href="https://twitter.com" target='_blank' rel="noreferrer">
               <div className='social-icon-container'>
                 <BsTwitter className="social" />
               </div>
