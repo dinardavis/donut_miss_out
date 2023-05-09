@@ -104,6 +104,7 @@ a:hover {
 
 .btn:hover {
   background-color: hsl(var(--clr-secondary));
+  color: hsl(var(--clr-white));
 }
 
 .main-container {
@@ -499,6 +500,11 @@ a:hover {
   border-bottom: 1.5px solid #fff;
 }
 
+.contact-form input.input-error {
+  border: 1.5px solid #e10000;
+  border-radius: .2rem;
+}
+
 .contact-form textarea {
   min-width: 100%;
   max-width: 100%;
@@ -509,6 +515,10 @@ a:hover {
   border: none;
   border-radius: .4rem;
   resize: none;
+}
+
+.contact-form textarea.input-error {
+  border: 1.5px solid #e10000;
 }
 
 .contact-btn {
