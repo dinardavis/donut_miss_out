@@ -22,16 +22,17 @@ export default function Contact() {
       message: false,
     }
   )
-  const firstNameField = ""
-  const lastNameField = ""
-  const emailField = ""
-  const messageField = ""
+  const [firstNameField, setFirstNameField] = React.useState("")
+  const [lastNameField, setLastNameField] = React.useState("")
+  const [emailField, setEmailField] = React.useState("")
+  const [messageField, setMessageField] = React.useState("")
+
 
   React.useEffect(() => {
-    firstNameField = document.querySelector(".firstNameField")
-    lastNameField = document.querySelector(".lastNameField")
-    emailField = document.querySelector(".emailField")
-    messageField = document.querySelector(".messageField")
+    setFirstNameField(document.querySelector(".firstNameField"))
+    setLastNameField(document.querySelector(".lastNameField"))
+    setEmailField(document.querySelector(".emailField"))
+    setMessageField(document.querySelector(".messageField"))
   }, [])
  
   React.useEffect(() => {
