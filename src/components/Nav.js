@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby'
 import MobileNav from './MobileNav';
+import { Link } from 'gatsby';
 import { debounce } from './utilities/helpers';
 import mainLogo from "../assets/imgs/main_logo.png"
 
@@ -8,7 +8,7 @@ export default function Navbar() {
   const [prevScroll, setPrevScroll] = React.useState(0) 
   const [visible, setVisible] = React.useState(true)
   const [mobileNavState, setMobileNavState] = React.useState(false)
-  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = React.useState(0)
 
   function handleToggle() {
     setMobileNavState(prevNav => !prevNav)
@@ -63,23 +63,23 @@ export default function Navbar() {
 
   return (
     <nav className={`nav-container ${prevScroll === 0 || mobileNavState ? "no-background" : "nav-shadow"}`} style = {{...styles, top: visible ? '0px' : '-105px', backgroundColor: mobileNavState ? "transparent" : ""}}>
-      <Link to="/#home">
+      <Link to="/">
         <img className="nav-logo" onClick={() => setMobileNavState(false)} src={mainLogo} alt="Dinar Davis Main Logo" />
       </Link>
 
       <div className="main-nav">
         <ul>
           <li>
-            <Link to="/#about" activeClassName='active-link'>about</Link>
+            <Link to="/#about" activeClassName='active-a'>about</Link>
           </li>
           <li>
-            <Link to="/#order" activeClassName='active-link'>order</Link>
+            <Link to="/#order" activeClassName='active-a'>order</Link>
           </li>
           <li>
-            <Link to="/#reviews" activeClassName='active-link'>reviews</Link>
+            <Link to="/#reviews" activeClassName='active-a'>reviews</Link>
           </li>
           <li>
-            <Link to="/contact" activeClassName='active-link'>contact</Link>
+            <Link to="/contact" activeClassName='active-a'>contact</Link>
           </li>
         </ul>
       </div>

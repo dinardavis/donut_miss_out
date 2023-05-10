@@ -38,7 +38,7 @@ export default function Reviews() {
   ]
 
   const [reviewIndex, setReviewIndex] = React.useState(0);
-  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = React.useState(0)
   const timeoutRef = React.useRef(null);
   const delay = 6500;
 

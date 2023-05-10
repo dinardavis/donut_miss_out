@@ -8,11 +8,14 @@ import { BsTwitter } from "react-icons/bs"
 
 export default function MobileNav(props) {
 
-  if(props.mobileNavState) {
-    document.body.classList.add('fixed-position')
-  } else {
-    document.body.classList.remove('fixed-position')
-  }
+  React.useEffect(() => {
+    if(props.mobileNavState) {
+      document.body.classList.add('fixed-position')
+    } else {
+      document.body.classList.remove('fixed-position')
+    }
+  }, [props.mobileNavState])
+ 
  
   return (
     <div className="mobile-nav">

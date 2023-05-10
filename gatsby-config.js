@@ -8,6 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: "/donut_miss_out",
   plugins: [`gatsby-plugin-smoothscroll`,
     {
       resolve: 'gatsby-plugin-manifest',

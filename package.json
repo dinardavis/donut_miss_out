@@ -10,10 +10,12 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "gatsby": "^5.8.1",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-manifest": "^5.8.0",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "react": "^18.2.0",
@@ -28,5 +30,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
